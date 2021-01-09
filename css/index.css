@@ -1,5 +1,5 @@
 html {
-    background-color: whitesmoke;
+    background-color: rgb(163, 163, 163);
 }
 
 body {
@@ -11,8 +11,8 @@ body {
 header,
 footer {
     text-align: center;
-    color: cornsilk;
-    background-color: rgb(32, 32, 32);
+    color: rgb(212, 212, 212);
+    background-color: rgb(2, 88, 2);
     border-radius: 10px;
     padding: 15px;
 }
@@ -24,7 +24,7 @@ header h1 {
 header img {
     float: right;
     margin-top: -85px;
-    box-shadow: 0 5px 20px rgb(51, 50, 50);
+    border: 5px rgb(49, 100, 57);
 }
 
 main {
@@ -36,9 +36,9 @@ footer {
 }
 
 footer a {
-    color: cornsilk;
+    color: rgb(212, 212, 212);
 }
 
 #date {
-    color: rgb(255, 255, 115);
+    color: rgb(212, 212, 212);
 }
