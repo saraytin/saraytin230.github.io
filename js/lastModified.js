@@ -1,2 +1,2 @@
-const lastModified = document.lastModified;
-document.getElementById('date').textContent = "Last Updated: " + lastModified;
+var lastModified = document.lastModified;
+document.getElementById('date').innerHTML = "Last Updated on " + lastModified;

@@ -1,0 +1,47 @@
+html {
+    background-color: rgb(163, 163, 163);
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+header,
+footer {
+    margin-top: 10px;
+    text-align: center;
+    color: rgb(212, 212, 212);
+    background-color: rgb(2, 88, 2);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+header h1 {
+    margin-right: 100px;
+}
+
+header img {
+    float: right;
+    max-height: 300px;
+    margin-top: -80px;
+    border: 5px rgb(201, 211, 57);
+    border-radius: 30px;
+}
+
+main {
+    padding: 50px 20px;
+}
+
+footer {
+    font-size: .8rem;
+}
+
+footer a {
+    color: rgb(212, 212, 212);
+}
+
+#date {
+    color: rgb(212, 212, 212);
+}
