@@ -1,7 +1,5 @@
 @media only screen and (min-width: 60em) {
-    main {display:grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: auto;}
+    main {grid-template-columns: 1fr 1fr 1fr;}
     .visualHierarchy {grid-column-start: 1;}
     .whiteSpace {grid-column-start: 2;}
     .repitition {grid-column-start: 3;}

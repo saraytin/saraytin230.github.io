@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Yusei+Magic&display=swap');
+
+html {
+    background-color: #CCDBDC;
+}
+
+body {
+    font-family: "Raleway", Helvetica, sans-serif;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: #FA9F42;
+    border-radius: 15px;
+}
+
+nav ul li {
+    flex: 1 1 auto;
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+}
+
+h1 {
+    font-family: 'Yusei Magic', Helvetica, sans-serif;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: 'Yusei Magic', Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: 'Yusei Magic', Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+h4 {
+    font-family: 'Yusei Magic', Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+p, a {
+    font-size: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+header,
+footer {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Yusei Magic', Helvetica, sans-serif;
+    color: #CCDBDC;
+    background-color: #52489C;
+    border-radius: 15px;
+    padding: 20px 0px 20px 0px;
+}
+
+footer {
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-size: 0.8em;
+}
+
+header h1 {
+    margin-right: 100px;
+}
+
+header img {
+    float: right;
+    max-height: 95px;
+    margin-top: -90px;
+    margin-right: 10px;
+}
+
+main {
+    padding: 20px;
+    color: #161413;
+}
+
+a:link {
+    color: #52489C;
+}
+
+a:hover {
+    color: #161413;
+}
+
+a:visited {
+    color: #A62639;
+}
+
+#footerLink {
+    color: #CCDBDC;
+}
+
+#logo {
+    float: left;
+    padding: 2em;
+    max-height: 300px;
+}
+
+#logoInfo {
+    overflow: auto;
+}
+
+.persona {
+    background-color: #FA9F42;
+    padding: 1em;
+}
+
+#colorPalette {
+    max-width: 100%;
+}
+
+#textColor {
+    color: #161413;
+    padding: 1em;
+}
+#backgroundColor {
+    color: #CCDBDC;
+    background-color: #2D2D2D;
+    padding: 1em;
+}
+#accentColor1 {
+    color: #52489C;
+    padding: 1em;
+}
+#accentColor2 {
+    color: #FA9F42;
+    background-color: #2D2D2D;
+    padding: 1em;
+}
+#accentColor3 {
+    color: #A62639;
+    padding: 1em;
+}
+
+#fontSize {
+    background-color: #FA9F42;
+    padding: 2em;
+}
+
+#footerSize {
+    font-size: 0.8em;
+}
