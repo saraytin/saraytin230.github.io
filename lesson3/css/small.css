@@ -98,6 +98,18 @@ a:visited {
     color: #A62639;
 }
 
+nav a:link {
+    color: #52489C;
+}
+
+nav a:hover {
+    color: #A62639;
+}
+
+nav a:visited {
+    color: #161413;
+}
+
 #footerLink {
     color: #CCDBDC;
 }
