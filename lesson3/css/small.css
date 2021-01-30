@@ -6,7 +6,9 @@ html {
 
 body {
     font-family: "Raleway", Helvetica, sans-serif;
-    max-width: 750px;
+}
+
+.content {
     margin: 0 auto;
 }
 
@@ -54,15 +56,14 @@ nav a {
     font-size: 1.2em;
 }
 
-header,
-footer {
-    margin-top: 10px;
-    text-align: center;
+header {
     font-family: 'Yusei Magic', Helvetica, sans-serif;
     color: #CCDBDC;
     background-color: #52489C;
-    border-radius: 15px;
-    padding: 20px 0px 20px 0px;
+    padding: 5px 0;
+	display: flex;
+	align-items:center;
+	justify-content:center;
 }
 
 footer {
