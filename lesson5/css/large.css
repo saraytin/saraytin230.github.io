@@ -1,0 +1,7 @@
+@media only screen and (min-width: 60em) {
+
+    main, footer {
+        max-width: 60%;
+        margin: auto;
+    }
+}

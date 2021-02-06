@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preston, Idaho | IIWW</title>
+    <meta name="description" content="Weather site page for Preston, Idaho">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <img src="images/iiww_icon.png" alt="site logo">
+            <section class="headings">
+                <h1>Is It Walking Weather?</h1>
+                <div class="motto">Find the best time to go out!</div>
+                <button onclick="toggleMenu()">&#9776;</button>
+            </section>
+        </header>
+        <nav class="clearfix">
+            <ul id="navbar" class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="preston-5.html">Preston</a></li>
+                <li><a href="#">Soda Springs</a></li>
+                <li><a href="#">Fish Haven</a></li>
+                <li><a href="#">Storm Center</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Preston, Idaho</h2>
+            <div class="banner">
+                <img src="banner_image.jpg" alt="image of Preston">
+                <div class="weather-summary">
+                    <strong>Weather Summary</strong>
+                    <p>floating on<br>medium/large<br>or below<br>on small</p>
+                </div>
+            </div>
+            <div class="forecast">
+            <h3>Five Day Forecast</h3>
+                <ul class="forecast-images">
+                    <li><img src="forecast_placeholder.jpg" alt="forecast 1"></li>
+                    <li><img src="forecast_placeholder.jpg" alt="forecast 2"></li>
+                    <li><img src="forecast_placeholder.jpg" alt="forecast 3"></li>
+                    <li><img src="forecast_placeholder.jpg" alt="forecast 4"></li>
+                    <li><img src="forecast_placeholder.jpg" alt="forecast 5"></li>
+                </ul>
+            </div>
+            <div class="article">
+                <h3>Article Title</h3>
+                <p class="article-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum consequuntur ea harum 
+                    eum maiores vel similique fuga architecto aspernatur, tempore veniam est, commodi minus molestias, 
+                    sed cumque iusto earum. Necessitatibus.</p>
+                <img src="article-image.jpg" alt="article image">
+                </div>
+        </main>
+        <footer>
+            <section class="map">
+                <div class="contact">
+                    <h4>Contact Information</h4>
+                    <p class="contact-info">an address<br>a phone number<br>an email</p>
+                    <div class="social">
+                        <a href="http://facebook.com" target="_blank"> 
+                        <img src="https://cdn.glitch.com/d5d28a1d-9edf-4a9f-bb00-5bd701627966%2Ffacebook.png?1548955481936" alt="Facebook icon"></a>
+                        <a href="https://www.twitter.com/" target="_blank"> 
+                        <img src="https://byui-cit.github.io/wdd130/images/icons/color/twitter.png" alt="twitter icon"></a>
+                        <a href="https://www.youtube.com/" target="_blank"> 
+                        <img src="https://cdn.glitch.com/d5d28a1d-9edf-4a9f-bb00-5bd701627966%2Fyoutube.png?1548955501333" alt="Youtube icon"></a>
+                    </div>
+                </div>
+                <div class="map-outer">
+                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=preston,%20idaho&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+            </section>
+            <p>&copy;<span id="year"></span> Is It Walking Weather | Sam Tindall | Alabama | <a href="https://www.byui.edu/online" target="_blank" id="footerLink">BYU-Idaho Online Learning</a></p>
+            <p id="date"></p>
+        </footer>
+    </div>
+    <script src="js/lesson5.js"></script>
+</body>
+</html>
