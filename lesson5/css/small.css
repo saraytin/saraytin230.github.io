@@ -48,6 +48,15 @@ a:visited {
     color: #A62639;
 }
 
+#event-banner {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    color: #52489C;
+    background-color: #F5EC42;
+    font-size: 1.5em;
+}
+
 header {
     text-align: center;
     font-family: 'Yusei Magic', Helvetica, sans-serif;
@@ -110,7 +119,7 @@ nav li {
     flex: 1 1 auto;
     text-align: center;
     margin: auto;
-    padding: 10px;
+    padding: 0;
     display: none;
 }
 
@@ -130,17 +139,29 @@ nav ul {
     margin: 0;
     font-weight: 600;
 }
+nav ul li a {
+	display: block;
+	text-align: center;
+	padding: 0.75rem;
+	text-decoration: none;
+}
 
 nav a:link {
     color: #52489C;
 }
 
-nav a:hover {
-    color: #A62639;
+nav a:visited {
+    color: #52489C;
 }
 
-nav a:visited {
-    color: #161413;
+nav a:hover {
+    color: #F5EC42;
+    background-color: #52489C;
+}
+
+nav ul li.active a {
+    color: #F5EC42;
+    background-color: #52489C;
 }
 
 main {
@@ -148,12 +169,32 @@ main {
     color: #161413;
 }
 
-.forecast ul {
-    list-style: none;
-    padding: 0;
+.banner img {
+    max-width: 100%;
+    box-shadow: 5px 10px 20px;
+}
+
+.weather-summary {
+    margin-top: 1em;
+}
+
+.forecast {
+    display: none;
+}
+
+.article img {
+    max-width: 100%;
+    box-shadow: 5px 10px 20px;
+    float: right;
+    margin-bottom: 1em;
+}
+
+.article-body {
+    clear: right;
 }
 
 footer {
+    clear: both;
     text-align: center;
     color: #CCDBDC;
     background-color: #52489C;
@@ -176,19 +217,11 @@ footer a:link, footer a:visited {
     display: none;
 }
 
-.map-outer {
+.map-image img {
+    display: none;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
     text-align: right;
-    height: 500px;
-    width: 600px;
-    padding-bottom: 1em;
-}
-
-.gmap_canvas {
-    overflow: hidden;
-    background: none;
-    height: 500px;
-    width: 600px;
+    padding: 0.75em 0 1em 0;
+    max-width: 100%;
 }

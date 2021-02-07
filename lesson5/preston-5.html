@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="css/large.css">
 </head>
 
-<body>
+<body onload="eventBanner()">
+    <div id="event-banner"><p>Saturday = Preston Pancakes in the Park!<br>9:00 a.m. Saturday at the city park pavilion.</p></div>
     <div class="content">
         <header>
             <img src="images/iiww_icon.png" alt="site logo">
@@ -25,7 +26,7 @@
         <nav class="clearfix">
             <ul id="navbar" class="navigation">
                 <li><a href="#">Home</a></li>
-                <li><a href="preston-5.html">Preston</a></li>
+                <li class="active"><a href="preston-5.html">Preston</a></li>
                 <li><a href="#">Soda Springs</a></li>
                 <li><a href="#">Fish Haven</a></li>
                 <li><a href="#">Storm Center</a></li>
@@ -35,35 +36,44 @@
         <main>
             <h2>Preston, Idaho</h2>
             <div class="banner">
-                <img src="banner_image.jpg" alt="image of Preston">
+                <img src="images/hero-image.png" alt="image of town">
                 <div class="weather-summary">
                     <strong>Weather Summary</strong>
-                    <p>floating on<br>medium/large<br>or below<br>on small</p>
+                    <p>Currently: Sunny<br>High: 56 &#8457;<br>Wind Chill: 50 &#8457;<br>Wind Speed: 7mph<br>Humidity: 75%</p>
                 </div>
             </div>
             <div class="forecast">
             <h3>Five Day Forecast</h3>
-                <ul class="forecast-images">
-                    <li><img src="forecast_placeholder.jpg" alt="forecast 1"></li>
-                    <li><img src="forecast_placeholder.jpg" alt="forecast 2"></li>
-                    <li><img src="forecast_placeholder.jpg" alt="forecast 3"></li>
-                    <li><img src="forecast_placeholder.jpg" alt="forecast 4"></li>
-                    <li><img src="forecast_placeholder.jpg" alt="forecast 5"></li>
-                </ul>
+                <table>
+                    <tr>
+                        <td><img src="images/forecast_sunny.png" alt="sunny icon"></td>
+                        <td><img src="images/forecast_partlycloudy.png" alt="sun and clouds icon"></td>
+                        <td><img src="images/forecast_overcast.png" alt="cloud icon"></td>
+                        <td><img src="images/forecast_storm.png" alt="storm icon"></td>
+                        <td><img src="images/forecast_fog.png" alt="fog icon"></td>
+                    </tr>
+                    <tr>
+                        <td> 51 &#8457;</td>
+                        <td> 48 &#8457;</td>
+                        <td> 50 &#8457;</td>
+                        <td> 45 &#8457;</td>
+                        <td> 55 &#8457;</td>
+                    </tr>
+                </table>
             </div>
             <div class="article">
                 <h3>Article Title</h3>
+                <img src="images/article-image.jpg" alt="image of a crowd">
                 <p class="article-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum consequuntur ea harum 
                     eum maiores vel similique fuga architecto aspernatur, tempore veniam est, commodi minus molestias, 
                     sed cumque iusto earum. Necessitatibus.</p>
-                <img src="article-image.jpg" alt="article image">
                 </div>
         </main>
         <footer>
             <section class="map">
                 <div class="contact">
                     <h4>Contact Information</h4>
-                    <p class="contact-info">an address<br>a phone number<br>an email</p>
+                    <p class="contact-info">&#127970; an address<br>&#128222; a phone number<br>&#128233; an email</p>
                     <div class="social">
                         <a href="http://facebook.com" target="_blank"> 
                         <img src="https://cdn.glitch.com/d5d28a1d-9edf-4a9f-bb00-5bd701627966%2Ffacebook.png?1548955481936" alt="Facebook icon"></a>
@@ -73,8 +83,8 @@
                         <img src="https://cdn.glitch.com/d5d28a1d-9edf-4a9f-bb00-5bd701627966%2Fyoutube.png?1548955501333" alt="Youtube icon"></a>
                     </div>
                 </div>
-                <div class="map-outer">
-                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=preston,%20idaho&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <div class="map-image">
+                    <img src="images/map.png" alt="static map image for now"> 
                 </div>
             </section>
             <p>&copy;<span id="year"></span> Is It Walking Weather | Sam Tindall | Alabama | <a href="https://www.byui.edu/online" target="_blank" id="footerLink">BYU-Idaho Online Learning</a></p>

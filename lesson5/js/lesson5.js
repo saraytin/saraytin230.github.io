@@ -16,3 +16,16 @@ function toggleMenu() {
       x.className = "navigation";
     }
 }
+
+function eventBanner() {
+  var now = new Date();
+  var dayOfWeek = now.getDate();
+  var show = document.getElementById('event-banner');
+
+  if (dayOfWeek == 5) {
+      show.style.display = (show.style.display == 'block') ? 'none' : 'block';
+      }
+      else {
+          show.style.display = (show.style.display == 'none') ? 'block' : 'none';
+      }
+}

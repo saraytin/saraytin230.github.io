@@ -4,4 +4,9 @@
         max-width: 60%;
         margin: auto;
     }
+
+    .contact {
+        float: right;
+        margin-right: 10%;
+    }
 }
