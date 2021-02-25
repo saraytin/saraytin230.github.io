@@ -5,30 +5,30 @@ html {
 }
 
 table {
-    background-color: #e7f0ed;
+    background-color: #e7ffed;
     text-align: center;
-    margin: 0 auto;
     border-spacing: 1px;
-}
-
-table caption {
-    background-color: #7fb9c2;
-    text-align: center;
-    padding: 0.2rem;
-    margin: 1rem auto 0 auto;
-    font-weight: 600;
-    font-size: 1.2em;
-    white-space: nowrap;
-    max-width: 100%
+    border: 1px solid lightgray;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px #628ca6;
+    min-width: 275px;
 }
 
 thead {
+    background-color: #7fb9c2;
+    margin: 1rem auto -1px auto;
+    font-weight: 600;
+    font-size: 1.5em;
+    white-space: nowrap;
+}
+
+tbody th {
     background-color: #628ca6;
     color: white;
 }
 
 tr:nth-child(even) {
-    background-color: #e7ffed;
+    background-color: #e7f0ed;
 }
 
 tfoot {
@@ -36,8 +36,8 @@ tfoot {
     font-size: 0.75em;
 }
 
-td {
-    padding: 0.2rem;
+td, th {
+    padding: 0.3rem;
 }
 
 .goalMet {
