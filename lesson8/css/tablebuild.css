@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap');
+
+html {
+    font-family: "Ubuntu", sans-serif;
+}
+
+table {
+    background-color: #e7f0ed;
+    text-align: center;
+    margin: 0 auto;
+    border-spacing: 1px;
+}
+
+table caption {
+    background-color: #7fb9c2;
+    text-align: center;
+    padding: 0.2rem;
+    margin: 1rem auto 0 auto;
+    font-weight: 600;
+    font-size: 1.2em;
+    white-space: nowrap;
+    max-width: 100%
+}
+
+thead {
+    background-color: #628ca6;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #e7ffed;
+}
+
+tfoot {
+    background-color: #7fb9c2;
+    font-size: 0.75em;
+}
+
+td {
+    padding: 0.2rem;
+}
+
+.goalMet {
+    background-color: #628ca6;
+    color: white;
+}
