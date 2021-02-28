@@ -1,0 +1,20 @@
+@media only screen and (min-width: 60em) {
+
+    main, footer {
+        max-width: 60%;
+        margin: auto;
+    }
+
+    .contact {
+        float: right;
+        margin-right: 10%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    } 
+    
+    .gallery figure:hover {
+        box-shadow: 0 0 15px #333;
+    }
+}
