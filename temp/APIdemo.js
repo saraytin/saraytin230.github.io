@@ -18,7 +18,7 @@ function getSign() {
 		console.table(jsonObject);
 		const horoscope = jsonObject;
 		let results = document.createElement('section');
-		let h2 = document.createElement('h2');
+		let h3 = document.createElement('h3');
 		let p1 = document.createElement('p');
 		let p2 = document.createElement('p');
 		let p3 = document.createElement('p');
@@ -28,7 +28,7 @@ function getSign() {
 		let p7 = document.createElement('p');
 
 		const nameCapitalized = sign.charAt(0).toUpperCase() + sign.slice(1)
-		h2.textContent = nameCapitalized + ' - ' + horoscope.current_date;
+		h3.textContent = nameCapitalized + ' - ' + horoscope.current_date;
 		p1.textContent = 'For: ' + horoscope.date_range;
 		p2.textContent = 'Compatible with: ' + horoscope.compatibility;
 		p3.textContent = 'Mood: ' + horoscope.mood;
@@ -37,7 +37,7 @@ function getSign() {
 		p6.textContent = 'Lucky Time: ' + horoscope.lucky_time;
 		p7.textContent = 'Further details: ' + horoscope.description;
 
-		results.appendChild(h2);
+		results.appendChild(h3);
 		results.appendChild(p1);
 		results.appendChild(p2);
 		results.appendChild(p3);
