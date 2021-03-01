@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demonstration of the Aztro API for a web app">
+    <title>API Demo</title>
+</head>
+<body>
+    <main>
+        <h2>Sign: </h2>
+            <select id="sign">
+                <option value="aries">Aries</option>
+                <option value="taurus">Taurus</option>
+                <option value="gemini">Gemini</option>
+                <option value="cancer">Cancer</option>
+                <option value="leo">Leo</option>
+                <option value="virgo">Virgo</option>
+                <option value="libra">Libra</option>
+                <option value="scorpio">Scorpio</option>
+                <option value="sagittarius">Sagittarius</option>
+                <option value="capricorn">Capricorn</option>
+                <option value="aquarius">Aquarius</option>
+                <option value="pisces">Pisces</option>
+            </select><br>
+        <h2>Day: </h2>
+            <select id="day">
+                <option value="today">Today</option>
+                <option value="yesterday">Yesterday</option>
+                <option value="tomorrow">Tomorrow</option>
+            </select><br><br>
+        <button type="button" onclick="getSign()">Get Your Reading</button>
+        <div class="results"></div>
+    </main>
+    <script src="APIdemo.js"></script>
+</body>
+</html>
