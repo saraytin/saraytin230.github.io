@@ -9,12 +9,19 @@ fetch(requestURL)
  	for (let i = 0; i < prophets.length; i++ ) {
 		let card = document.createElement('section');
 		let h2 = document.createElement('h2');
+		let dob = document.createElement('p');
+		let pob = document.createElement('p');
+		let image = document.createElement('img');
 		
 		h2.textContent = prophets[i].name + ' ' + prophets[i].lastname;
-		let image = document.createElement('img');
+		dob.textContent = 'Date of Birth: ' + prophets[i].birthdate;
+		pob.textContent = 'Place of Birth: ' + prophets[i].birthplace;
 		image.setAttribute('src', prophets[i].imageurl);
+
 		card.appendChild(h2);
+		card.appendChild(dob);
+		card.appendChild(pob);
 		card.appendChild(image);
+		
 		document.querySelector('div.cards').appendChild(card);}
-	
 });
