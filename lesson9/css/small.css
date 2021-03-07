@@ -389,3 +389,7 @@ form input.submitButton {
 .cards h3 {
     margin: 20px 0 0;
 }
+
+div#wireframes {
+    display: flex;
+}
