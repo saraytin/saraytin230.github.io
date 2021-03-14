@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Yusei+Magic&display=swap');
+
+html {
+    background-color: #CCDBDC;
+}
+
+body {
+    font-family: "Raleway", Helvetica, sans-serif;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Yusei Magic', Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+p, a {
+    font-size: 1em;
+}
+
+a:link {
+    color: #52489C;
+}
+
+a:hover {
+    color: #161413;
+}
+
+a:visited {
+    color: #A62639;
+}
+
+#event-banner {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    color: #52489C;
+    background-color: #F5EC42;
+    font-size: 1.5em;
+}
+
+header {
+    text-align: center;
+    font-family: 'Yusei Magic', Helvetica, sans-serif;
+    color: #CCDBDC;
+    background-color: #52489C;
+    margin: 0 auto;
+}
+
+header h1 {
+    margin-right: 100px;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    color: #CCDBDC;
+    background-color: #52489C;
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-size: 0.8em;
+    padding-bottom: 0.5em;
+}
+
+footer a:link, footer a:visited {
+    color: #CCDBDC;
+}
+
+#part1 {
+    margin-bottom: 10rem;
+}
+
+#cities {
+    font-size: 1.25rem;
+}
+
+#part2 button {
+    margin: 1rem;
+}
+
+#students {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 3rem;
+    color: red;
+}
+
+#students section {
+    border: inset;
+    padding: 1rem;
+    color: black;
+}

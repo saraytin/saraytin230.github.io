@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation | CS213</title>
+    <meta name="description" content="Form demonstration for CS213">
+    <link rel="stylesheet" href="assign09.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <h1>Country Information</h1>
+        </header>
+        <main>
+            <div id="part1">
+                <h2>Please select a country to see its cities.</h2>
+                <label for="country">Choose a country: </label>
+                <select name="country" id="country" onchange="showCities()" autofocus>
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="mexico">Mexico</option>
+                    <option value="russia">Russia</option>
+                </select>
+                <div id="cities"><p>-</p><p>-</p><p>-</p><p>-</p><p>-</p><p>-</p><p>-</p><p>-</p><p>-</p><p>-</p></div>
+            </div>
+            <div id="part2">
+                <h2>Please input a student list to see its students.</h2>
+                <label>Filename or URL: <input type="text" name="input_path" value="json.txt"></label><br>
+                <button type="button" onclick="showStudents()">Read File</button>
+                <div id="students"></div>
+            </div>
+        </main>
+        <footer class="clearfix">
+            <br>Sam Tindall | CS213 | <a href="https://www.byui.edu/online" target="_blank" id="footerLink">BYU-Idaho Online Learning</a>
+            <p id="date"></p>
+        </footer>
+    </div>
+    <script src="assign09.js"></script>
+</body>
+</html>

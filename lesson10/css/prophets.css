@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@700&family=Open+Sans:wght@400&display=swap');
+
+html {
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #3f3f99;
+    font-family: 'Kreon', serif;
+}
+
+header {
+    margin-bottom: 20px;
+    padding-bottom: 0;
+}
+
+div {
+    background-color: #dddddd;
+    box-shadow: 0px -5px 10px gray;
+    min-width: 100%;
+    padding-top: 8px;
+    margin-left: -10px;
+    padding-left: 10px;
+    margin-right: -10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+section {
+    border: solid 1px #4d4d96;
+    background-color: #b9b9cc;
+    margin: 0 auto 8px auto;
+    width: 96%
+}
+
+section h2 {
+    margin: 0.8rem;
+}
+
+section p {
+    margin: 0.3rem auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+section img {
+    display: block;
+    margin: 0.7rem auto;
+    box-shadow: 5px 5px 10px black;
+    max-width: 50%;
+}
+
+footer {
+    background-color: #dddddd;
+    text-align: center;
+    z-index: -1;
+    margin-left: -10px;
+    padding-left: 10px;
+    margin-right: -10px;
+    padding-right: 10px;
+    margin-top: -10px;
+    padding-top: 10px;
+    margin-bottom: -10px;
+}
+
+@media only screen and (min-width: 32.5em) {
+    div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 8px;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    div {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | IIWW</title>
-    <meta name="description" content="Find out if it's walking weather in Preston, Soda Springs, or Fish Haven">
+    <title>Preston, Idaho | IIWW</title>
+    <meta name="description" content="Weather site page for Preston, Idaho">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/small.css">
@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="css/large.css">
 </head>
 
-<body onload="homePage()">
+<body onload="townPage()">
+    <div id="event-banner"><p>Saturday = Preston Pancakes in the Park!<br>9:00 a.m. Saturday at the city park pavilion.</p></div>
     <div class="content">
         <header>
             <img src="images/iiww_icon.png" alt="site logo">
@@ -24,8 +25,8 @@
         </header>
         <nav class="clearfix">
             <ul id="navbar" class="navigation">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="../lesson10/preston-10.html">Preston</a></li>
+                <li><a href="../lesson9/index.html">Home</a></li>
+                <li class="active"><a href="preston-10.html">Preston</a></li>
                 <li><a href="#">Soda Springs</a></li>
                 <li><a href="#">Fish Haven</a></li>
                 <li><a href="../lesson8/stormcenter.html">Storm Center</a></li>
@@ -33,27 +34,35 @@
             </ul>
         </nav>
         <main>
-            <div class="heroBlock">
+            <h2>Preston, Idaho</h2>
+            <div class="banner">
                 <picture>
-                  <source srcset="images/hero-image-small.png" media="(max-width:450px)"/>
-                  <source srcset="images/hero-image-medium.png" media="(max-width:700px)"/>
-                  <source srcset="images/hero-image-large.png" media="(max-width:1000px)"/>
-                  <img class="hero-image" src="images/hero-image-large.png" alt="picture of a mountain town"/>
+                    <source media="(max-width: 32.49em)" srcset="images/image_franklin520.jpg">
+                    <source media="(max-width: 59.99em)" srcset="images/image_franklin960.jpg">
+                    <source media="(min-width: 60em)" srcset="images/image_franklin1400.jpg">
+                    <img src="images/image_franklin1400.jpeg" alt="Hero image">
                 </picture>
+                <div class="weather-summary">
+                    <strong>Weather Summary</strong>
+                    <p>Currently: <span id="currWeather"></span><br>
+                       Temperature: <span id="currTemp"></span>&#8457;<br>
+                       Wind Speed: <span id="windSpeed"></span>mph<br>
+                       Wind Chill: <span id="chillTemp"></span><br>
+                       Humidity: <span id="humidity"></span>%</p>
+                </div>
             </div>
-            <h3>Our Towns</h3>
-            <div class="cards"></div>
-            <article>
+            <h3>Five Day Forecast</h3>
+            <div class="forecast">
+            </div>
+            <div class="article">
                 <h3>Article Title</h3>
-                <p>By John Doe</p>
-                <img src="images/article-image.jpg" alt="People walking through town">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ab culpa deserunt, nam, quos fuga nostrum, sapiente a nihil facere perspiciatis. Id delectus ab voluptates? Iusto, inventore minima atque quasi, nemo laudantium vero corporis
-                    quidem porro a suscipit placeat deserunt quas delectus dolores! Earum totam perferendis atque, ipsa eveniet libero minima sit ad saepe provident, cum aspernatur ab est. Animi repellendus non dolorem ad eaque deserunt distinctio alias
-                    odio cumque. Culpa quaerat nesciunt, voluptatum cumque veniam voluptas eos modi harum quibusdam. Molestiae, labore error! Earum nesciunt voluptatibus repudiandae incidunt impedit at ad quasi id dolore perspiciatis, ratione reprehenderit
-                    voluptas repellendus error dignissimos veritatis recusandae voluptates odio, ullam esse officia! Mollitia earum debitis maiores animi modi autem veritatis.</p>
-            </article>
+                <img src="images/article-image.jpg" alt="image of a crowd">
+                <p class="article-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum consequuntur ea harum 
+                    eum maiores vel similique fuga architecto aspernatur, tempore veniam est, commodi minus molestias, 
+                    sed cumque iusto earum. Necessitatibus.</p>
+                </div>
         </main>
-        <footer class="clearfix">
+        <footer>
             <section class="map">
                 <div class="contact">
                     <h4>Contact Information</h4>
@@ -75,7 +84,7 @@
             <p id="date"></p>
         </footer>
     </div>
-    <script src="js/lesson9.js"></script>
+    <script src="js/lesson10.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
     WebFont.load({google: {families: ['Yusei Magic','Raleway']}});
