@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | IIWW</title>
+    <meta name="description" content="Gallery page for Is It Walking Weather">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <img src="images/iiww_icon.png" alt="site logo">
+            <section class="headings">
+                <h1>Is It Walking Weather?</h1>
+                <div class="motto">Find the best time to go out!</div>
+            </section>
+        </header>
+        <nav class="clearfix">
+            <button onclick="toggleMenu()">&#9776;</button>
+            <ul id="navbar" class="navigation">
+                <li><a href="index">Home</a></li>
+                <li><a href="preston.html">Preston</a></li>
+                <li><a href="sodasprings">Soda Springs</a></li>
+                <li><a href="fishhaven">Fish Haven</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li class="active"><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Weather Gallery</h2>
+            <div class="gallery">
+                <figure>
+                <img src="https://via.placeholder.com/640x426" data-src="images/clouds-on-mountain.jpg" alt="A mountain reaching the clouds">
+                <figcaption>A mountain reaching the clouds</figcaption>
+                </figure>
+                <figure>
+                <img src="https://via.placeholder.com/640x426" data-src="images/cumulus-clouds.jpg" alt="Cumulus clouds on a bright day">
+                <figcaption>Cumulus clouds on a bright day</figcaption>
+                </figure>
+                <figure>
+                <img src="https://via.placeholder.com/640x426" data-src="images/cumulonimbus-clouds.jpg" alt="Darkening cumulonimbus clouds">
+                <figcaption>Darkening cumulonimbus clouds</figcaption>
+                </figure>
+                <figure>
+                <img src="https://via.placeholder.com/640x426" data-src="images/tornado.jpg" alt="Approaching tornado">
+                <figcaption>Approaching tornado</figcaption>
+                </figure>
+                <figure>
+                <img src="https://via.placeholder.com/640x426" data-src="images/fog-over-city.jpg" alt="A city covered in fog">
+                <figcaption>A city covered in fog</figcaption>
+                </figure>
+                <figure>
+                <img src="https://via.placeholder.com/640x426" data-src="images/heavy-rain.jpg" alt="Heavy rain on the street">
+                <figcaption>Heavy rain on the street</figcaption>
+                </figure>
+                <figure>
+                <img src="https://via.placeholder.com/640x426" data-src="images/coastal-storm.jpg" alt="Lightning striking a coastal city">
+                <figcaption>Lightning striking a coastal city</figcaption>
+                </figure>
+                <figure>
+                <img src="https://via.placeholder.com/640x426" data-src="images/snowfield.jpg" alt="Snowfield at sunset">
+                <figcaption>Snowfield at sunset</figcaption>
+                </figure>
+                <figure>
+                <img src="https://via.placeholder.com/640x426" data-src="images/snowflake-closeup.jpg" alt="Close-up shot of a snowflake">
+                <figcaption>Close-up shot of a snowflake</figcaption>
+                </figure>
+            </div>
+        </main>
+        <footer class="clearfix">
+            <br><p>&copy;<span id="year"></span> Is It Walking Weather | Sam Tindall | Alabama | <a href="https://www.byui.edu/online" target="_blank" id="footerLink">BYU-Idaho Online Learning</a></p>
+            <p id="date"></p>
+        </footer>
+    </div>
+    <script src="js/iiww_scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+    WebFont.load({google: {families: ['Yusei Magic','Raleway']}});
+    </script>
+
+</body>
+</html>

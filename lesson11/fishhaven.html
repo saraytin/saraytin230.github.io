@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Haven, Idaho | IIWW</title>
+    <meta name="description" content="Weather site page for Preston, Idaho">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+</head>
+
+<body onload="townPage()">
+    <div id="event-banner"><p>Saturday = Preston Pancakes in the Park!<br>9:00 a.m. Saturday at the city park pavilion.</p></div>
+    <div class="content">
+        <header>
+            <img src="images/iiww_icon.png" alt="site logo">
+            <section class="headings">
+                <h1>Is It Walking Weather?</h1>
+                <div class="motto">Find the best time to go out!</div>
+                <button onclick="toggleMenu()">&#9776;</button>
+            </section>
+        </header>
+        <nav class="clearfix">
+            <ul id="navbar" class="navigation">
+                <li><a href="index">Home</a></li>
+                <li><a href="preston.html">Preston</a></li>
+                <li><a href="sodasprings">Soda Springs</a></li>
+                <li class="active"><a href="fishhaven">Fish Haven</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Fish Haven, Idaho</h2>
+            <div class="banner">
+                <picture>
+                    <source media="(max-width: 32.49em)" srcset="images/image_franklin520.jpg">
+                    <source media="(max-width: 59.99em)" srcset="images/image_franklin960.jpg">
+                    <source media="(min-width: 60em)" srcset="images/image_franklin1400.jpg">
+                    <img src="images/image_franklin1400.jpeg" alt="Hero image">
+                </picture>
+                <div class="weather-summary">
+                    <strong>Weather Summary</strong>
+                    <p>Currently: <span id="currWeather"></span><br>
+                       Temperature: <span id="currTemp"></span>&#8457;<br>
+                       Wind Speed: <span id="windSpeed"></span>mph<br>
+                       Wind Chill: <span id="chillTemp"></span><br>
+                       Humidity: <span id="humidity"></span>%</p>
+                </div>
+            </div>
+            <h3>Five Day Forecast</h3>
+            <div class="forecast">
+            </div>
+            <div class="article">
+                <h3>Article Title</h3>
+                <img src="images/article-image.jpg" alt="image of a crowd">
+                <p class="article-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum consequuntur ea harum 
+                    eum maiores vel similique fuga architecto aspernatur, tempore veniam est, commodi minus molestias, 
+                    sed cumque iusto earum. Necessitatibus.</p>
+                </div>
+        </main>
+        <footer>
+            <section class="map">
+                <div class="contact">
+                    <h4>Contact Information</h4>
+                    <p class="contact-info">&#127970; an address<br>&#128222; a phone number<br>&#128233; an email</p>
+                    <div class="social">
+                        <a href="http://facebook.com" target="_blank"> 
+                        <img src="https://cdn.glitch.com/d5d28a1d-9edf-4a9f-bb00-5bd701627966%2Ffacebook.png?1548955481936" alt="Facebook icon"></a>
+                        <a href="https://www.twitter.com/" target="_blank"> 
+                        <img src="https://byui-cit.github.io/wdd130/images/icons/color/twitter.png" alt="twitter icon"></a>
+                        <a href="https://www.youtube.com/" target="_blank"> 
+                        <img src="https://cdn.glitch.com/d5d28a1d-9edf-4a9f-bb00-5bd701627966%2Fyoutube.png?1548955501333" alt="Youtube icon"></a>
+                    </div>
+                </div>
+                <div class="map-image">
+                    <img src="images/map.png" alt="static map image for now"> 
+                </div>
+            </section>
+            <p>&copy;<span id="year"></span> Is It Walking Weather | Sam Tindall | Alabama | <a href="https://www.byui.edu/online" target="_blank" id="footerLink">BYU-Idaho Online Learning</a></p>
+            <p id="date"></p>
+        </footer>
+    </div>
+    <script src="js/iiww_scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+    WebFont.load({google: {families: ['Yusei Magic','Raleway']}});
+    </script>
+
+</body>
+</html>

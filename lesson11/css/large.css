@@ -1,0 +1,54 @@
+@media only screen and (min-width: 63em) {
+
+    main, footer {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .contact {
+        float: right;
+        margin-right: 10%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    } 
+    
+    .gallery figure:hover {
+        box-shadow: 0 0 15px #333;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cards section {
+        display: initial;
+        padding: 0 0 10px;
+        width: 300px;
+    }
+
+    .cards img {
+        object-fit: contain;
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .townCard {
+        width: 90%;
+    }
+
+    .cards p {
+        padding: 0 15px 15px;
+    }
+
+    .cards h3 {
+        margin-top: 20px;
+        text-align: center;
+    }
+}
