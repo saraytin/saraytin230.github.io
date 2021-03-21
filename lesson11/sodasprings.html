@@ -12,23 +12,23 @@
     <link rel="stylesheet" href="css/large.css">
 </head>
 
-<body onload="townPage()">
-    <div id="event-banner"><p>Saturday = Preston Pancakes in the Park!<br>9:00 a.m. Saturday at the city park pavilion.</p></div>
+<body>
+    <div id="event-banner"><p>Saturday = Soda Springs Soufflé in the Park!<br>9:00 a.m. Saturday at the city park pavilion.</p></div>
     <div class="content">
         <header>
             <img src="images/iiww_icon.png" alt="site logo">
             <section class="headings">
                 <h1>Is It Walking Weather?</h1>
                 <div class="motto">Find the best time to go out!</div>
-                <button onclick="toggleMenu()">&#9776;</button>
             </section>
         </header>
         <nav class="clearfix">
+            <button onclick="toggleMenu()">&#9776;</button>
             <ul id="navbar" class="navigation">
-                <li><a href="index">Home</a></li>
-                <li class="active"><a href="preston.html">Preston</a></li>
-                <li><a href="sodasprings">Soda Springs</a></li>
-                <li><a href="fishhaven">Fish Haven</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="sodasprings.html">Soda Springs</a></li>
+                <li><a href="fishhaven.html">Fish Haven</a></li>
+                <li><a href="preston.html">Preston</a></li>
                 <li><a href="stormcenter.html">Storm Center</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
             </ul>
@@ -37,10 +37,10 @@
             <h2>Soda Springs, Idaho</h2>
             <div class="banner">
                 <picture>
-                    <source media="(max-width: 32.49em)" srcset="images/image_franklin520.jpg">
-                    <source media="(max-width: 59.99em)" srcset="images/image_franklin960.jpg">
-                    <source media="(min-width: 60em)" srcset="images/image_franklin1400.jpg">
-                    <img src="images/image_franklin1400.jpeg" alt="Hero image">
+                  <source srcset="images/hero-image-small.png" media="(max-width:450px)"/>
+                  <source srcset="images/hero-image-medium.png" media="(max-width:700px)"/>
+                  <source srcset="images/hero-image-large.png" media="(max-width:1000px)"/>
+                  <img class="hero-image" src="images/hero-image-large.png" alt="picture of a mountain town"/>
                 </picture>
                 <div class="weather-summary">
                     <strong>Weather Summary</strong>
@@ -52,17 +52,47 @@
                 </div>
             </div>
             <h3>Five Day Forecast</h3>
-            <div class="forecast">
-            </div>
-            <div class="article">
+            <div class="forecast"></div>
+            <div class="events"></div>
+            <article>
                 <h3>Article Title</h3>
                 <img src="images/article-image.jpg" alt="image of a crowd">
-                <p class="article-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum consequuntur ea harum 
-                    eum maiores vel similique fuga architecto aspernatur, tempore veniam est, commodi minus molestias, 
-                    sed cumque iusto earum. Necessitatibus.</p>
-                </div>
+                <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua. Sit amet aliquam id diam. Adipiscing at in tellus integer feugiat scelerisque varius. 
+                    Adipiscing elit ut aliquam purus sit amet. Massa eget egestas purus viverra accumsan in. Molestie a iaculis at erat 
+                    pellentesque adipiscing commodo. Eget egestas purus viverra accumsan in. Mauris vitae ultricies leo integer malesuada. 
+                    Maecenas sed enim ut sem viverra. Sit amet justo donec enim diam vulputate.</p>
+                <p class="article-body">Non odio euismod lacinia at quis risus sed. Cursus risus at ultrices mi tempus imperdiet nulla. Posuere sollicitudin 
+                    aliquam ultrices sagittis orci a. Gravida arcu ac tortor dignissim. Nec nam aliquam sem et. Semper viverra nam libero 
+                    justo laoreet sit amet. Suscipit tellus mauris a diam. Id semper risus in hendrerit gravida rutrum. Viverra aliquet 
+                    eget sit amet tellus cras adipiscing enim. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. 
+                    Massa enim nec dui nunc mattis enim ut tellus. Euismod nisi porta lorem mollis aliquam ut porttitor leo. Lobortis mattis 
+                    aliquam faucibus purus in massa tempor nec. Facilisis volutpat est velit egestas dui id. Viverra nam libero justo laoreet 
+                    sit amet cursus sit. Tortor dignissim convallis aenean et tortor. Augue ut lectus arcu bibendum. Et tortor consequat id 
+                    porta nibh venenatis cras sed felis. Auctor augue mauris augue neque gravida.</p>
+                <p class="article-body">Arcu cursus euismod quis viverra. Faucibus a pellentesque sit amet porttitor eget dolor. Viverra nam libero justo laoreet 
+                    sit amet cursus sit amet. Eget lorem dolor sed viverra. Faucibus ornare suspendisse sed nisi lacus sed viverra. Rhoncus dolor 
+                    purus non enim. Vel fringilla est ullamcorper eget nulla facilisi etiam. Tellus molestie nunc non blandit massa enim nec dui. 
+                    Placerat duis ultricies lacus sed turpis tincidunt. Nulla pellentesque dignissim enim sit amet venenatis. Tortor consequat id 
+                    porta nibh venenatis. Fermentum leo vel orci porta non. Parturient montes nascetur ridiculus mus mauris vitae. Molestie ac 
+                    feugiat sed lectus vestibulum mattis. Duis ut diam quam nulla porttitor massa id neque. At risus viverra adipiscing at in tellus 
+                    integer.</p>
+                <p class="article-body">Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis. Natoque penatibus et magnis dis. 
+                    Sem fringilla ut morbi tincidunt augue interdum velit euismod in. A diam maecenas sed enim ut sem. Nunc sed blandit libero volutpat 
+                    sed cras. Mollis nunc sed id semper risus. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Id donec ultrices tincidunt 
+                    arcu. Sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper eget duis at tellus at urna condimentum mattis. Suspendisse 
+                    sed nisi lacus sed viverra tellus in hac. Tortor condimentum lacinia quis vel eros donec. Placerat duis ultricies lacus sed turpis 
+                    tincidunt id aliquet risus.</p>
+                <p class="article-body">Viverra mauris in aliquam sem. Lorem mollis aliquam ut porttitor leo a. Velit egestas dui id ornare. Morbi blandit cursus risus at 
+                    ultrices mi tempus imperdiet. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Adipiscing elit duis tristique 
+                    sollicitudin nibh sit amet commodo nulla. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Id venenatis a 
+                    condimentum vitae sapien pellentesque. Pulvinar pellentesque habitant morbi tristique senectus et. Elit pellentesque habitant morbi 
+                    tristique senectus et netus et malesuada. Amet est placerat in egestas erat imperdiet sed. Vel facilisis volutpat est velit egestas 
+                    dui id ornare arcu. Consectetur adipiscing elit duis tristique. Tortor consequat id porta nibh venenatis cras sed felis eget. Risus 
+                    feugiat in ante metus dictum at tempor commodo. Iaculis at erat pellentesque adipiscing commodo elit at.</p>
+            </article>
         </main>
-        <footer>
+        <footer class="clearfix">
             <section class="map">
                 <div class="contact">
                     <h4>Contact Information</h4>
@@ -77,7 +107,7 @@
                     </div>
                 </div>
                 <div class="map-image">
-                    <img src="images/map.png" alt="static map image for now"> 
+                    <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=soda%20springs,%20idaho+(My%20Business%20Name)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                 </div>
             </section>
             <p>&copy;<span id="year"></span> Is It Walking Weather | Sam Tindall | Alabama | <a href="https://www.byui.edu/online" target="_blank" id="footerLink">BYU-Idaho Online Learning</a></p>
@@ -85,6 +115,7 @@
         </footer>
     </div>
     <script src="js/iiww_scripts.js"></script>
+    <script src="js/sodasprings.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
     WebFont.load({google: {families: ['Yusei Magic','Raleway']}});

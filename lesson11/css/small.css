@@ -89,12 +89,13 @@ header img {
     margin: 0.5em auto 0.5em auto;
 }
 
-header button {
+nav button {
     color: #CCDBDC;
     background-color: #52489C;
     font-size: 2em;
     border: none;
     justify-content: center;
+    width: 100%;
 }
 
 .clearfix:after {
@@ -169,7 +170,7 @@ main {
     color: #161413;
 }
 
-.banner img {
+.banner img, .heroBlock img {
     max-width: 100%;
     box-shadow: 5px 10px 20px;
 }
@@ -182,15 +183,10 @@ main {
     display: none;
 }
 
-.article img {
-    max-width: 100%;
-    box-shadow: 5px 10px 20px;
-    float: right;
-    margin-bottom: 1em;
-}
-
 .article-body {
     clear: right;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
 }
 
 footer {
@@ -210,20 +206,19 @@ footer a:link, footer a:visited {
 .contact {
     padding: 0.75em;
     font-size: 1em;
-    text-align: left;
+    text-align: center;
 }
 
 .social img {
     display: none;
 }
 
-.map-image img {
+.map-image {
     display: none;
-    margin-left: auto;
+    margin-left: 0.75rem;
     margin-right: auto;
     text-align: right;
     padding: 0.75em 0 1em 0;
-    max-width: 100%;
 }
 
 .gallery {
@@ -405,4 +400,18 @@ div.forecast {
     padding: 0.25rem;
     border: inset;
     text-align: center;
+}
+
+section.eventCard {
+    margin: 0 auto;
+    background-color: #52489C;
+    color: #F5EC42;
+    max-width: 100%;
+    margin-top: 1rem;
+    padding: 0.1rem 1rem 0.1rem 1rem;
+    box-shadow: 5px 5px 10px black;
+}
+
+section.eventCard h3 {
+    margin-top: 0.4rem;
 }
