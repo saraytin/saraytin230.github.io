@@ -1,0 +1,75 @@
+{
+  "event": [
+    {
+      "name": "Food Truck Friday",
+      "description": "Please join us for Food Truck Friday! On the first Friday of every month, local food trucks will gather outside the City Center from 3-7 PM. Come for a meal, a snack, or a delicious dessert from some of our city’s outstanding culinary providers. Grab-and-go is available for commuters on their way home, or bring the whole family for a Friday Picnic on The Green. We’re proud of the many options our city provides – your support helps our community thrive!",
+      "vendors": {
+        "vendor": [
+          {
+            "name": "Saw's Street Kitchen"
+          },
+          {
+            "name": "Hollywood Grill"
+          },
+          {
+            "name": "Los Valedores Tacos"
+          },
+          {
+            "name": "Full Moon BBQ"
+          },
+          {
+            "name": "Ironstone Pizza"
+          },
+          {
+            "name": "Dreamcakes"
+          },
+          {
+            "name": "205 ICE"
+          },
+          {
+            "name": "Steel City Pops"
+          },
+          {
+            "name": "Nuzzi Artisan Gelato"
+          }
+        ]
+      },
+      "image": "images/foodtruck.png"
+    },
+    {
+      "name": "Wing Ding",
+      "description": "With great regret we announce the cancellation of Wing Ding 2021. With the COVID-19 pandemic still limiting crowd sizes, we cannot provide a safe environment for this much-loved annual competition. Rest assured, local professional and amateur chefs will be ready to fire up their grills in Spring 2022, and the Chamber is already planning a lineup of live music, children’s activities, and plenty of refreshments. All proceeds benefit local charities, so we hope to see you there!",
+      "image": "/images/wingding.png"
+    },
+    {
+      "name": "Chamber Luncheon",
+      "description": "On the second Tuesday of each month, the Chamber luncheon offers a catered meal from one of our local restaurants, a speaker, and plenty of time for networking with other members. Please make your reservations at least one week in advance. Check back here for upcoming speakers and luncheon details.",
+      "speaker": [
+        {
+          "name": "Spencer Bachus",
+          "title": "Former U.S. Representative",
+          "date": "April 13, 2021",
+          "food": "Lunch provided by Newk’s Eatery"
+        },
+        {
+          "name": "Michael Papajohn",
+          "title": "Actor, stuntman, and entrepreneur",
+          "date": "May 11, 2021",
+          "food": "Lunch provided by Taziki’s Café"
+        },
+        {
+          "name": "Jabo Waggoner",
+          "title": "Alabama State Senator",
+          "date": "June 8, 2021",
+          "food": "Lunch provided by Panera Bread"
+        }
+      ],
+      "image": "luncheon.png"
+    },
+    {
+      "name": "I Love America",
+      "description": "Once a single-day 4th of July celebration, I Love America is now a summer-long community celebration. Each month a new activity is hosted at Wald Park, with opportunities for local business members to participate as sponsors, vendors, or volunteer hosts. The events (concerts in the park, movie nights, free swimming at the pool, a business expo, and more) are well attended by surrounding communities, and rank as one of our most popular traditions.",
+      "image": "iloveamerica.png"
+    }
+  ]
+}

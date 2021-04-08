@@ -12,9 +12,9 @@ function eventBanner() {
     if (dayOfWeek == 5) {
         show.style.display = (show.style.display == 'block') ? 'none' : 'block';
         }
-        else {
-            show.style.display = (show.style.display == 'none') ? 'block' : 'none';
-        }
+    else {
+        show.style.display = (show.style.display == 'none') ? 'block' : 'none';
+    }
   }
   
 function windChill(t,s) {

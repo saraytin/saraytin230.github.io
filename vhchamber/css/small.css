@@ -1,0 +1,461 @@
+/* It's going to be a lot more organized this time ----------------------------------------------*/
+
+:root {
+    --heading-font: 'Noto Serif', serif;
+    --body-font: 'Fira Sans', Helvetica, sans-serif;
+    --footer-font: 'Quicksand', Helvetica, sans-serif;
+
+    --background-color: #F1FAEE;
+    --primary-text: #070A0E;
+    --secondary-text: #A8DADC;
+    --link-text: #E63946;
+    --primary-accent: #1D3557;
+    --secondary-accent: #457B9D;
+}
+
+/* Text fonts/sizes, colors for general use -----------------------------------------------------*/
+
+html {
+    background-color: var(--background-color);
+}
+
+main p, 
+main ul li{
+    font-family: var(--body-font);
+    color: var(--primary-text);
+    font-size: 1em;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+/* Weather alert --------------------------------------------------------------------------------*/
+
+#alert {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    color: var(--primary-accent);
+    background-color: var(--secondary-text);
+    font-size: 1.5em;
+}
+
+/* Navigation settings --------------------------------------------------------------------------*/
+
+nav {
+    box-sizing: border-box;
+    list-style: none;
+    background-color: var(--primary-accent);
+    padding: 0;
+}
+
+nav ul {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+    align-items: center;
+    font-weight: 700;
+}
+
+nav ul li {
+    flex: 1 1 auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}   
+
+nav ul li a {
+	display: block;
+    color: var(--secondary-text);
+	text-align: center;
+	padding: 0.75rem;
+	text-decoration: none;
+    font-size: 1.2em;
+    white-space: nowrap;
+}
+
+nav ul li.active a,
+nav ul li a:hover {
+    color: var(--primary-accent);
+    background-color: var(--secondary-text);
+}
+
+.responsive {
+    display: block;
+}
+
+.responsive img {
+    display: none;
+}
+
+nav button {
+    color: var(--secondary-text);
+    background-color: var(--primary-accent);
+    font-size: 2em;
+    border: none;
+    justify-content: center;
+    width: 100%;
+}
+
+nav img {
+    margin-right: 2em;
+}
+
+/* Slideshows (unexplored territory) ------------------------------------------------------------*/
+
+
+
+/* header {
+    text-align: center;
+    color: var(--secondary-text);
+    background-color: var(--primary-accent);
+    margin: 0 auto;
+}
+
+header h1 {
+    margin-right: 100px;
+}
+
+header img {
+    float: left;
+	width: 100px;
+	height: auto;
+}
+
+.headings {
+	display: flex;
+	flex-direction: column;
+}
+
+.headings h1 {
+	margin: 0 auto;
+}
+
+.motto {
+    font-style: italic;
+    margin: 0.5em auto 0.5em auto;
+} */
+
+/* .clearfix:after {
+    display: table;
+    content: "";
+    clear: both;
+} */
+
+/* Main Body ------------------------------------------------------------------------------------*/
+
+main {
+    max-width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner img {
+    max-width: 100%;
+    box-shadow: 5px 10px 20px;
+}
+
+.weather-summary {
+    margin-top: 1em;
+}
+
+.forecast {
+    display: none;
+}
+
+.article-body {
+    clear: right;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+main a:link {
+    color: var(--link-text);
+    font-size: 1em;
+}
+
+main a:hover {
+    color: var(--primary-text);
+    background-color: var(--secondary-text);
+}
+
+main a:visited {
+    color: var(--link-text);
+}
+
+/* Footer info ----------------------------------------------------------------------------------*/
+
+footer {
+    clear: both;
+    text-align: center;
+    color: var(--secondary-text);
+    background-color: var(--primary-accent);
+    font-family: var(--footer-font);
+    font-size: 0.8em;
+    padding: 0.5em;
+}
+
+footer a:link, footer a:visited {
+    color: var(--background-color);
+}
+
+.contact p {
+    line-height: 1.5em;
+    font-size: 1em;
+}
+
+.social img {
+    display: none;
+}
+
+.map-image {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+    padding: 0.75em 0 1em 0;
+}
+
+span#address-line-2 {
+    margin-left: 20px;
+}
+
+/* .gallery {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    grid-gap: 1rem;
+    justify-items: center;
+}
+
+.gallery figure {
+    margin:0;
+    padding: .5rem;
+    border: solid 1px #B6CADD;
+}
+
+.gallery figcaption {
+    margin: .5rem 0;
+}
+
+.gallery img[data-src] {
+    filter: blur(0.2em);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    filter: blur(0em);
+    transition: filter 1s;
+} */
+
+/* Home page specific ---------------------------------------------------------------------------*/
+
+div.forecast {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--secondary-text);
+}
+
+div.forecast section {
+    width: 98%;
+    border: solid 0.25rem var(--secondary-accent);
+    text-align: center;
+    box-shadow: 5px 5px 10px var(--primary-accent);
+    margin-bottom: 0.5rem;
+}
+
+div.advertisements {
+    clear: both;
+    display: flex;
+}
+
+div.advertisements section {
+    display: inline;
+}
+
+div.events {
+    display: flex;
+    flex-direction: column;
+}
+
+div.events section {
+    margin: 0 auto;
+    background-color: var(--primary-accent);
+    color: var(--secondary-text);
+    max-width: 100%;
+    margin-top: 1rem;
+    padding: 0.1rem 1rem 0.1rem 1rem;
+    box-shadow: 5px 5px 10px black;
+}
+
+div.events section h3 {
+    margin-top: 0.4rem;
+}
+
+/* City page specific ---------------------------------------------------------------------------*/
+
+
+
+/* Join page specific ---------------------------------------------------------------------------*/
+
+form label.top input,
+form label.top select,
+form label.top textarea {
+    display: block;
+    font-size: 1em;
+    border: solid 1px var(--background-color);
+    border-radius: 5px;
+    padding: 5px;
+    color: var(--primary-text);
+    width: 90%;
+    margin-bottom: 25px;
+}
+
+form input, form textarea, form select {
+    background-color: var(--background-color);
+}
+
+form .slider {
+    margin: .5em auto 1.5em auto;
+}
+
+form label.danger {
+    display: flex;
+    padding: .75rem;
+}
+
+form {
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+    margin-bottom: 80px;
+}
+
+form fieldset {
+    border-radius: 10px;
+    border: 1px dotted rgba(0, 0, 0, .3);
+    padding: 10px;
+    margin: 20px 0 30px;
+}
+
+form legend {
+    color: var(--primary-text);
+    font-style: italic;
+}
+
+form label.top,
+form div {
+    font-size: .8rem;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+form label.top input:required {
+    border-left: red solid 5px;
+}
+
+form label.top input:required:valid {
+    border-left: green solid 5px;
+}
+
+form input.submitButton {
+    border: none;
+    background-color: var(--primary-accent);
+    color: var(--secondary-text);
+    border-radius: 10px;
+    padding: 20px 0;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+#thanksMessage {
+    font-size: 1.5em;
+}
+
+/* Directory page specific ----------------------------------------------------------------------*/
+
+.townCard {
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
+    padding: 0.25rem;
+    border: inset;
+}
+  
+.townCard div {
+    width: 100px;
+    text-align: center;
+}
+  
+.townCard dt {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+  
+.townCard dd {
+    display: inline;
+    margin: 0;
+    font-size: 12px;
+}
+  
+.cards section {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 15% 20% 15%;
+    background-color: var(--white-color);
+    padding: 20px;
+    width: 343px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--dark-75);
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 0 0 10px;
+    align-items: center;
+    justify-items: center;
+}
+  
+.cards img {
+    object-fit: cover;
+    width: 343px;
+    height: 200px;
+    padding: 0;
+    border-radius: 8px 8px 0 0;
+}
+  
+.cards p {
+    text-align: center;
+    height: 32px;
+    font-style: oblique;
+}
+  
+.cards h3 {
+    margin: 20px 0 0;
+}
