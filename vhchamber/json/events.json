@@ -32,12 +32,12 @@
           "name": "Nuzzi Artisan Gelato"
         }
       ],
-      "image": "images/food_truck.png"
+      "image": "https://saraytin.github.io/vhchamber/images/food_truck.png"
     },
     {
       "name": "Wing Ding",
       "description": "With great regret we announce the cancellation of Wing Ding 2021. With the COVID-19 pandemic still limiting crowd sizes, we cannot provide a safe environment for this much-loved annual competition. Rest assured, local professional and amateur chefs will be ready to fire up their grills in Spring 2022, and the Chamber is already planning a lineup of live music, children’s activities, and plenty of refreshments. All proceeds benefit local charities, so we hope to see you there!",
-      "image": "/images/wingding.png"
+      "image": "https://saraytin.github.io/vhchamber/images/wingding.png"
     },
     {
       "name": "Chamber Luncheon",
@@ -62,12 +62,12 @@
           "food": "Lunch provided by Panera Bread"
         }
       ],
-      "image": "luncheon.png"
+      "image": "https://saraytin.github.io/vhchamber/images/luncheon.png"
     },
     {
       "name": "I Love America",
       "description": "Once a single-day 4th of July celebration, I Love America is now a summer-long community celebration. Each month a new activity is hosted at Wald Park, with opportunities for local business members to participate as sponsors, vendors, or volunteer hosts. The events (concerts in the park, movie nights, free swimming at the pool, a business expo, and more) are well attended by surrounding communities, and rank as one of our most popular traditions.",
-      "image": "iloveamerica.png"
+      "image": "https://saraytin.github.io/vhchamber/images/iloveamerica.png"
     }
   ]
 }

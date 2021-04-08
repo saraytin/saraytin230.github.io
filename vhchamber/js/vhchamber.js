@@ -176,19 +176,20 @@ function eventUpdate() {
             if (typeof jsonObject.event[i].vendors != "undefined") {
                 let header = document.createElement('p');
                 header.textContent = "Vendors:";
+                card.appendChild(header);
                 let vendors = document.createElement('ul');
+                card.appendChild(vendors);
                 for (v = 0; v < jsonObject.event[i].vendors; v++) {
                     let vendor = document.createElement('li');
                     vendor.textContent = jsonObject.event[i].vendors[v].name;
                     vendors.appendChild(vendor);
                 }
-                card.appendChild(header);
-                card.appendChild(vendors);
             }
             else if (typeof jsonObject.event[i].speakers != "undefined") {
                 let speakers = document.createElement('ul');
                 for (s = 0; s < jsonObject.event[i].speakers; s++) {
                     let speaker = document.createElement('li');
+                    speakers.appendChild(speaker);
                     let name = document.createElement('p');
                     let title = document.createElement('p');
                     let sDate = document.createElement('p');
@@ -201,7 +202,6 @@ function eventUpdate() {
                     speaker.appendChild(title);
                     speaker.appendChild(sDate);
                     speaker.appendChild(food);
-                    speakers.appendChild(speaker);
                 }
                 card.appendChild(speakers);
             }
