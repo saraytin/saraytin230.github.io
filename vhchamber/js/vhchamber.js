@@ -2,8 +2,6 @@ const apiKey = 'f062c5ac3e102c4047925dcbb3d80bdc';
 const date = new Date();
 const day = [" Sunday", " Monday", "Tuesday", " Wednesday", " Thursday", "Friday", " Saturday", " Sunday"];
 const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-weatherUpdate();
-lastModified();
 /* document.getElementById("date").innerHTML = day[date.getDay()] +
 ", " + date.getDate() + " " + month[date.getMonth()] + " " +
 date.getFullYear(); */
@@ -89,4 +87,73 @@ function weatherUpdate() {
             show.style.display = (show.style.display == 'none') ? 'block' : 'none';
         }
       });
+}
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); // Pulled this from MDN docs for the next function
+}
+
+function advertisementUpdate() {
+    console.log('here');
+    const requestURL = "https://saraytin.github.io/vhchamber/json/businesses.json";
+    fetch(requestURL)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (jsonObject) {
+          // Picking three random businesses to advertise from my list of affiliated businesses
+        console.log('here');
+        let pick1 = 0;
+        let pick2 = 0;
+        let pick3 = 0;
+        console.log(pick1, pick2, pick3);
+        const len = jsonObject.business.length;
+        pick1 = getRandomInt(0, len);
+        do {
+            pick2 = getRandomInt(0, len);
+        }
+        while (pick2 == pick1);
+        do {
+            pick3 = getRandomInt(0, len);
+        }
+        while (pick3 == pick1 || pick3 == pick2);
+        console.log(pick1, pick2, pick3);
+        // Run a for/if loop combo that picks up each of the businesses
+        for (i = 0; i < len; i++) {
+            if (i == pick1 || i == pick2 || i == pick3){
+                console.log(i);
+                displayBusiness(jsonObject, i);
+                console.log('here');
+            }
+            // I'll be doing the same thing again on the business page so I split it into a separate function
+        }
+      });  
+}
+
+function displayBusiness(jsonObject, i) {
+    console.log('henext func');
+    let card = document.createElement('section');
+    let label = document.createElement('h4');
+    let img = document.createElement('img');
+    let address = document.createElement('p');
+    let phone = document.createElement('p');
+    let site = document.createElement('a');
+    let name = jsonObject.business[i].name;
+    label.textContent = name;
+    address.textContent = jsonObject.business[i].address;
+    phone.textContent = jsonObject.business[i].phone;
+    site.textContent = "Website";
+    let siteURL = jsonObject.business[i].site;
+    site.setAttribute('href', siteURL);
+    let imageURL = jsonObject.business[i].logo;
+    img.setAttribute('src', imageURL);
+    img.setAttribute('alt', name);
+    card.appendChild(label);
+    card.appendChild(address);
+    card.appendChild(phone);
+    card.appendChild(site);
+    card.appendChild(img);
+    document.querySelector('div.advertisements').appendChild(card);
 }
