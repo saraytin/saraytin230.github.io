@@ -1,15 +1,92 @@
 @media only screen and (min-width: 63em) {
 
-    main, footer {
-        max-width: 1000px;
-        margin: auto;
+    /* Setting new widths -----------------------------------------------------------------------*/
+
+    main, div.banner, footer {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
     }
+
+    main {
+        width: 100%;
+    }
+
+    /* Navbar -----------------------------------------------------------------------------------*/
+
+    nav {
+        position: static;
+    }
+    
+    nav ul {
+        display: flex;
+        position: relative;
+        width: 1024px;
+    }
+    
+    nav ul li a {
+        color: var(--secondary-text);
+    }
+    
+    nav ul li a:visited {
+        color: var(--secondary-text);
+    }
+    
+    nav ul li.active a,
+    nav ul li a:hover {
+        color: var(--primary-accent);
+        background-color: var(--secondary-text);
+    }
+
+    /* home page --------------------------------------------------------------------------------*/
+
+    div.currentWeather {
+        float: left;
+    }
+
+    div.forecast {
+        display: inline-flex;
+        margin-left: 10rem;
+        width: 80rem;;
+    }
+
+    div.forecast section {
+        margin-right: 3px;
+    }
+
+    div.businesses,
+    div.events {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 100%;
+        width: 1024px;
+        padding-left: 0;
+    }
+
+    div.businesses section {
+        width: 33%;
+    }
+
+    div.events section {
+        width: 45%;
+    }
+
+    /* directory --------------------------------------------------------------------------------*/
+
+    div.board {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* footer -----------------------------------------------------------------------------------*/
 
     .contact {
         margin-top: 3rem;
     }
     
     .map-image {
+        position: relative;
+        margin-left: 5%;
+        margin-right: 5%;
         max-width: 60%;
     }
 
@@ -18,7 +95,7 @@
         margin-right: 10%;
     }
 
-    .gallery {
+/*     .gallery {
         grid-template-columns: 1fr 1fr 1fr;
     } 
     
@@ -58,5 +135,5 @@
     .cards h3 {
         margin-top: 20px;
         text-align: center;
-    }
+    } */
 }

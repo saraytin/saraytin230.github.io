@@ -20,23 +20,23 @@
             <button onclick="toggleMenu()">&#9776;</button>
             <ul id="navbar" class="navigation">
                 <li><img src="images/vhchamber_small.png" alt="Chamber of Commerce logo"></li>
-                <li class="active"><a href="index.html">Home</a></li>
+                <li class="active"><a href=".">Home</a></li>
                 <li><a href="city.html">City</a></li>
                 <li><a href="join.html">Join Us</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
+        <div id="alert"><strong>Weather alert for Vestavia Hills: </strong><p id="alert-message"></p></div>
+        <div class="banner">
+            <picture>
+              <source srcset="images/vhhall_small.jpg" media="(max-width:450px)"/>
+              <source srcset="images/vhhall_med.jpg" media="(max-width:700px)"/>
+              <source srcset="images/vhhall_large.jpg" media="(max-width:1024px)"/>
+              <img class="hero-image" src="images/vhhall_large.jpg" alt="picture of the Vestavia Hills City Hall"/>
+            </picture>
+        </div>
         <main>
-            <div id="alert"><strong>Weather alert for Vestavia Hills: </strong><p id="alert-message"></p></div>
-            <div class="banner">
-                <picture>
-                  <!-- <source srcset="images/vhchamber_large.png" media="(max-width:450px)"/>
-                  <source srcset="images/vhchamber_large.png" media="(max-width:700px)"/>
-                  <source srcset="images/vhchamber_large.png" media="(max-width:1000px)"/> -->
-                  <img class="hero-image" src="images/temp/1568298556426.jpg" alt="picture of a mountain town"/>
-                </picture>
-            </div>
             <h3>Weather</h3>
             <div class="currentWeather">
                 <h4>Today</h4> 
@@ -44,9 +44,9 @@
                 <p id="currWeather"></p>
                 <p id="humidity"></p>
             </div>
-            <h4>Forecast</h4>
             <div class="forecast">
             </div>
+            <div class="article">
             <article>
                 <h3>Welcome to the Vestavia Hills Chamber of Commerce!</h3>
                 <img src="images/vhchamber_large.png" alt="People walking through town">
@@ -57,8 +57,9 @@
                     unparalleled opportunity to its business members. Proximity to Birmingham opens an additional array of cultural 
                     and networking events, as well as convenient access to international travel and import/export supply lines.</p>
             </article>
-            <h3>Here are some of our featured local businesses!</h3>
-            <div class="advertisements"></div>
+            </div>
+            <h3 class="bheader">Here are some of our featured local businesses!</h3>
+            <div class="businesses"></div>
             <h3>Upcoming Events</h3>
             <div class="events"></div>
         </main>
@@ -80,7 +81,7 @@
                     <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=33.43361,%20-86.78890+(VH%20Chamber%20of%20Commerce)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                 </div>
             </section>
-            <p>&copy;<span id="year"></span> Totally Real Chamber of Commerce | Sam Tindall | <a href="https://www.byui.edu/online" target="_blank" id="footerLink">Attributions/Notes</a></p>
+            <p>&copy;<span id="year"></span> Totally Real Chamber of Commerce | Sam Tindall | <a href="attributions.html" target="_blank" id="footerLink">Attributions/Notes</a></p>
             <p><span id="date"></span><span id="year"></span></p>
         </footer>
     </div>

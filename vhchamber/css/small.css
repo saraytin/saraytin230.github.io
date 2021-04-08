@@ -20,7 +20,8 @@ html {
 }
 
 main p, 
-main ul li{
+main ul li,
+form {
     font-family: var(--body-font);
     color: var(--primary-text);
     font-size: 1em;
@@ -94,6 +95,10 @@ nav ul li a {
 	text-decoration: none;
     font-size: 1.2em;
     white-space: nowrap;
+}
+
+nav ul li a:visited {
+    color: var(--secondary-text);
 }
 
 nav ul li.active a,
@@ -177,14 +182,6 @@ main {
     box-shadow: 5px 10px 20px;
 }
 
-.weather-summary {
-    margin-top: 1em;
-}
-
-.forecast {
-    display: none;
-}
-
 .article-body {
     clear: right;
     margin-top: 0;
@@ -203,6 +200,10 @@ main a:hover {
 
 main a:visited {
     color: var(--link-text);
+}
+
+main img {
+    max-width: 100%;
 }
 
 /* Footer info ----------------------------------------------------------------------------------*/
@@ -290,14 +291,37 @@ div.forecast section {
     margin-bottom: 0.5rem;
 }
 
-div.advertisements {
-    clear: both;
+.currentWeather {
+    margin-top: 1em;
+}
+
+h3.businesses {
+    clear: right;
+}
+
+div.businesses {
     display: flex;
     flex-direction: column;
 }
 
-div.advertisements section {
+div.businesses section {
     display: inline;
+    border-bottom: 3px solid var(--primary-accent);
+    padding-bottom: 1rem;
+}
+
+div.businesses section h4,
+div.events section h4 {
+    text-align: center;
+}
+
+div.businesses section img,
+div.events section img {
+    max-width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
 }
 
 div.events {
@@ -307,30 +331,68 @@ div.events {
 
 div.events section {
     margin: 0 auto;
-    background-color: var(--primary-accent);
-    color: var(--secondary-text);
+    background-color: var(--secondary-text);
     max-width: 100%;
     margin-top: 1rem;
-    padding: 0.1rem 1rem 0.1rem 1rem;
+    padding: 0.1rem 1rem 1rem 1rem;
     box-shadow: 5px 5px 10px black;
 }
 
-div.events section h3 {
+div.events section h4 {
     margin-top: 0.4rem;
+    color: var(--primary-accent);
 }
 
-/* City page specific ---------------------------------------------------------------------------*/
+div.events {
+    margin-bottom: 1rem;
+}
 
+h3.bheader {
+    clear: both;
+}
 
+/* Directory specific ---------------------------------------------------------------------------*/
 
-/* Join page specific ---------------------------------------------------------------------------*/
+div.board {
+    background-color: var(--secondary-accent);
+    box-shadow: 0px -5px 10px gray;
+    padding-top: 8px;
+    margin-bottom: 10px;
+}
+
+div.board section {
+    border: solid 1px var(--primary-accent);
+    background-color: var(--secondary-text);
+    margin: 0 auto 8px auto;
+    text-align: center;
+    max-width: 90%;
+}
+
+div.board section h3 {
+    margin: 0.8rem;
+    
+}
+
+div.board section p {
+    margin: 0.3rem auto;
+    text-align: center;
+}
+
+div.board section img {
+    display: block;
+    margin: 0.7rem auto;
+    box-shadow: 5px 5px 10px black;
+    max-width: 50%;
+}
+
+/* Form stuff -----------------------------------------------------------------------------------*/
 
 form label.top input,
 form label.top select,
 form label.top textarea {
     display: block;
     font-size: 1em;
-    border: solid 1px var(--background-color);
+    border: solid 1px var(--secondary-accent);
     border-radius: 5px;
     padding: 5px;
     color: var(--primary-text);
@@ -340,15 +402,6 @@ form label.top textarea {
 
 form input, form textarea, form select {
     background-color: var(--background-color);
-}
-
-form .slider {
-    margin: .5em auto 1.5em auto;
-}
-
-form label.danger {
-    display: flex;
-    padding: .75rem;
 }
 
 form {
@@ -398,65 +451,4 @@ form input.submitButton {
 
 #thanksMessage {
     font-size: 1.5em;
-}
-
-/* Directory page specific ----------------------------------------------------------------------*/
-
-.townCard {
-    display: flex;
-    width: 300px;
-    margin: 0 auto;
-    padding: 0.25rem;
-    border: inset;
-}
-  
-.townCard div {
-    width: 100px;
-    text-align: center;
-}
-  
-.townCard dt {
-    font-size: 21px;
-    font-weight: bold;
-    margin-bottom: 0px;
-}
-  
-.townCard dd {
-    display: inline;
-    margin: 0;
-    font-size: 12px;
-}
-  
-.cards section {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 50% 15% 20% 15%;
-    background-color: var(--white-color);
-    padding: 20px;
-    width: 343px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px var(--dark-75);
-    margin: 0 auto;
-    margin-bottom: 30px;
-    padding: 0 0 10px;
-    align-items: center;
-    justify-items: center;
-}
-  
-.cards img {
-    object-fit: cover;
-    width: 343px;
-    height: 200px;
-    padding: 0;
-    border-radius: 8px 8px 0 0;
-}
-  
-.cards p {
-    text-align: center;
-    height: 32px;
-    font-style: oblique;
-}
-  
-.cards h3 {
-    margin: 20px 0 0;
 }

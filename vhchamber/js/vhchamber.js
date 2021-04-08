@@ -126,6 +126,19 @@ function advertisementUpdate() {
       });  
 }
 
+function businessUpdate() {
+    const requestURL = "https://saraytin.github.io/vhchamber/json/businesses.json";
+    fetch(requestURL)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (jsonObject) {
+        for (i = 0; i < jsonObject.business.length; i++) {
+            displayBusiness(jsonObject, i);
+        }
+      });  
+}
+
 function displayBusiness(jsonObject, i) {
     let card = document.createElement('section');
     let label = document.createElement('h4');
@@ -148,7 +161,7 @@ function displayBusiness(jsonObject, i) {
     card.appendChild(phone);
     card.appendChild(site);
     card.appendChild(img);
-    document.querySelector('div.advertisements').appendChild(card);
+    document.querySelector('div.businesses').appendChild(card);
 }
 
 function eventUpdate() {
@@ -173,7 +186,7 @@ function eventUpdate() {
             card.appendChild(desc);
             card.appendChild(img);
             // This is a bad solution but it's what I'm going with for now
-            if (typeof jsonObject.event[i].vendors != "undefined") {
+            /* if (typeof jsonObject.event[i].vendors != "undefined") {
                 let header = document.createElement('p');
                 header.textContent = "Vendors:";
                 card.appendChild(header);
@@ -204,8 +217,66 @@ function eventUpdate() {
                     speaker.appendChild(food);
                 }
                 card.appendChild(speakers);
-            }
+            } */
             document.querySelector('div.events').appendChild(card);
           }
+      });  
+}
+
+function boardUpdate() {
+    const requestURL = "https://saraytin.github.io/vhchamber/json/board_of_directors.json";
+    fetch(requestURL)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (jsonObject) {
+        for (i = 0; i < jsonObject.leadership.person.length; i++) {
+            let card = document.createElement('section');
+            let label = document.createElement('h4');
+            let img = document.createElement('img');
+            let title = document.createElement('p');
+            let name = jsonObject.leadership.person[i].name;
+            label.textContent = name;
+            title.textContent = jsonObject.leadership.person[i].position;
+            let imageURL = jsonObject.leadership.person[i].image;
+            img.setAttribute('src', imageURL);
+            img.setAttribute('alt', "Picture of " + name);
+            card.appendChild(label);
+            card.appendChild(title);
+            card.appendChild(img);
+            document.querySelector('div.leadership').appendChild(card);
+        }
+        for (i = 0; i < jsonObject.vice_chairs.person.length; i++) {
+            let card = document.createElement('section');
+            let label = document.createElement('h4');
+            let img = document.createElement('img');
+            let title = document.createElement('p');
+            let name = jsonObject.vice_chairs.person[i].name;
+            label.textContent = name;
+            title.textContent = jsonObject.vice_chairs.person[i].position;
+            let imageURL = jsonObject.vice_chairs.person[i].image;
+            img.setAttribute('src', imageURL);
+            img.setAttribute('alt', "Picture of " + name);
+            card.appendChild(label);
+            card.appendChild(title);
+            card.appendChild(img);
+            document.querySelector('div.vicechairs').appendChild(card);
+        }
+        for (i = 0; i < jsonObject.board.person.length; i++) {
+            let card = document.createElement('section');
+            let label = document.createElement('h4');
+            let img = document.createElement('img');
+            let title = document.createElement('p');
+            let name = jsonObject.board.person[i].name;
+            label.textContent = name;
+            title.textContent = jsonObject.board.person[i].position;
+            let imageURL = jsonObject.board.person[i].image;
+            img.setAttribute('src', imageURL);
+            img.setAttribute('alt', "Picture of " + name);
+            card.appendChild(label);
+            card.appendChild(title);
+            card.appendChild(img);
+            document.querySelector('div.members').appendChild(card);
+        }
       });  
 }

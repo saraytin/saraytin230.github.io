@@ -35,53 +35,54 @@
         display: none;
     }
 
- /*    nav ul li {
-        white-space: nowrap;
-    } */
+    /* Main Body --------------------------------------------------------------------------------*/
+
 
     .banner {
         height: auto;
         position: relative;
     }
 
-    .weather-summary {
-        height: auto;
+    article img {
+        margin-left: 1em;
+        margin-bottom: 1em;
     }
 
     article img {
+        float: right;
         max-width: 40%;
-        margin-left: 1em;
-        margin-bottom: 1em;
+        margin: 0 1rem 1rem 1rem;
     }
 
     .article-body {
         clear: none;
     }
     
-    .weather-summary {
-        float: left;
-        position: absolute;
-        left: 30px;
-        top: 30px;
-        z-index: 1000;
-        background-color:rgba(245,236,66,.8);
-        padding: 5px;
-        color: #161413;
-        font-weight: bold;
-    }
-
-    .forecast {
-        display: block;
-    }
-
-    .forecast table img {
-        max-width: 60%
-    }
-
-    .forecast table {
+    main h3 {
         text-align: center;
-        font-size: 1.1em;
     }
+
+    /* Home page --------------------------------------------------------------------------------*/
+
+    div.currentWeather,
+    div.businesses,
+    div.events {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    div.forecast {
+        display: flex;
+        flex-direction: row;
+        clear: left;
+    }
+
+    div.events {
+        justify-content: center;
+    }
+
+    /* Footer -----------------------------------------------------------------------------------*/
     
     .social img {
         display: inline;
@@ -97,6 +98,15 @@
         display: block;
         max-width: 96%;
     }
+
+    /* Directory --------------------------------------------------------------------------------*/
+
+    div.board {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Dunno */
 
     .cards section {
         display: grid;
@@ -140,22 +150,6 @@
 
     .cards section:nth-child(even) h3, .cards section:nth-child(even) p, .cards section:nth-child(even) .townCard {
         grid-column: 2;
-    }
-
-    article img {
-        float: right;
-        margin: 1rem;
-        margin-top: 0;
-    }
-
-    div.forecast {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 1.5rem;
-    }
-
-    div.events {
-        justify-content: center;
     }
 
     section.eventCard {

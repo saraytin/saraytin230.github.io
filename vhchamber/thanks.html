@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | IIWW</title>
-    <meta name="description" content="Welcome to the Vestavia Hills Chamber of Commerce!">
+    <title>Join Us</title>
+    <meta name="description" content="Apply to join the Vestavia Hills Chamber of Commerce!">
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Noto+Serif:wght@400;700&family=Quicksand&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
                 <li><a href=".">Home</a></li>
                 <li><a href="city.html">City</a></li>
                 <li><a href="join.html">Join Us</a></li>
-                <li class="active"><a href="directory.html">Directory</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
@@ -37,10 +37,9 @@
                     <img class="hero-image" src="images/vhhall_large.jpg" alt="picture of the Vestavia Hills City Hall"/>
                   </picture>
             </div>
-            <h3>Meet our Board of Directors!</h3>
-            <div class="leadership board"></div>
-            <div class="vicechairs board"></div>
-            <div class="members board"></div>
+            <h2>Thank You!</h2>
+            <p id="thanksMessage">Thank you for reaching out. We'll get back to you shortly.</p>
+            <p><a href="..html">Return to the home page.</a></p>
         </main>
         <footer>
             <section class="map">
@@ -66,8 +65,10 @@
     </div>
     <script src="js/vhchamber.js"></script>
     <script>
+        weatherUpdate();
         lastModified();
-        boardUpdate();
+        advertisementUpdate();
+        eventUpdate();
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
