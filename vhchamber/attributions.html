@@ -12,6 +12,17 @@
     <link rel="stylesheet" href="css/small.css">
     <link rel="stylesheet" href="css/medium.css">
     <link rel="stylesheet" href="css/large.css">
+    <!--Internal CSS to avoid modifying my actual project files-->
+    <style>
+        article img {
+            margin-top: 4em;
+            display: block;
+            margin-left: 0;
+            margin-right: auto;
+            float: none;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -28,26 +39,38 @@
             </ul>
         </nav>
         <main>
-            
             <article>
                 <h3>Attributions:</h3>
-                <img src="images/vestaviahills.png.jpg" alt="banner image">
-                <p><a href="https://opengov.com/article/vestavia-hills-gives-residents-new-way-to-be-heard-via-online-forum/">Found at</a></p><br>
-                <img src="images/vhhs.png.jpg" alt="banner image">
-                <p><a href="https://www.wbrc.com/resizer/BvZ-VwDkYX3xLHCMiuEfpjhZP2o=/1200x0/cloudfront-us-east-1.images.arcpublishing.com/raycom/4LRWXA5X35CZHJYSU2PLJWVDIY.jpg">Found at</a></p><br>
-                <img src="images/sibyltemple.png" alt="banner image">
-                <p><a href="https://bhamnow.com/2020/10/09/a-look-at-sibyl-temple-the-classically-inspired-gazebo-atop-shades-mountain/">Found at</a></p><br>
-                <img src="images/voyagechiropractic.jpg" alt="banner image">
-                <p><a href="https://www.linkedin.com/company/city-of-vestavia-hills-alabama/">Found on the City of Cestavia Hills LinkedIn page</a></p><br>
-                <img src="images/voyagechiropractic.jpg" alt="banner image">
-                <p><a href="https://www.linkedin.com/company/vestavia-hills-chamber-of-commerce/">Found on the actual Chamber's LinkedIn page</a></p><br>
-                <img src="images/voyagechiropractic.jpg" alt="banner image">
-                <p><a href="https://www.vestavia.k12.al.us/Domain/10">Found at</a></p><br>
+                <img src="images/sibyltemple.jpg" alt="sibyl temple">
+                <a href="https://bhamnow.com/2020/10/09/a-look-at-sibyl-temple-the-classically-inspired-gazebo-atop-shades-mountain/">Found at</a>
+                <img src="images/vhhall_large.jpg" alt="banner image/city hall">
+                <a href="https://www.linkedin.com/company/city-of-vestavia-hills-alabama/">Found on the City of Cestavia Hills LinkedIn page</a>
+                <img src="images/voyagechiropractic.jpg" alt="article image">
+                <a href="https://www.linkedin.com/company/vestavia-hills-chamber-of-commerce/">Found on the actual Chamber's LinkedIn page</a>
+                <img src="images/wifisign.jpg" alt="city image">
+                <a href="https://www.linkedin.com/company/vestavia-hills-chamber-of-commerce/">Found on the actual Chamber's LinkedIn page</a>
+                <p>All logos for the business are taken from their sites. It's worth noting that while the logo for The Blue Willow is broken, it's actually on their end as far as I can tell.</p>
+                <p>All images of the Board of Directors are from the Vestavia Hills Chamber of Commerce Website.</p>
             </article>
-            <h3>Here are some of our featured local businesses!</h3>
-            <div class="advertisements"></div>
-            <h3>Upcoming Events</h3>
-            <div class="events"></div>
+            <h3>Things I would have done with an extra half hour (if it means anything):</h3>
+            <ul>
+                <li>Not turn the assignment in one minute late (sorry).</li>
+                <li>Add demographics information to the city page. I made a JSON for it but forgot to actually implement it.</li>
+                <li>Fix the page title on the homepage.</li>
+                <li>Move the second body image on the home and city pages (I was trying to add them when I saw the time, so it was sloppy).</li>
+                <li>Delete a bunch of unused/commented out CSS that I left when I was testing.</li>
+                <li>Similarly, delete unused images from my project folder.</li>
+            </ul>
+            <h3>And if I'd had an extra few hours (just so you know I am aware of the problems):</h3>
+            <ul>
+                <li>Figure out a way to get lazy loading working with JSON imported images (too many images to stay under 500K, and I wasn't especially close).</li>
+                <li>Fix the clipping on the navbar. A dirty fix would be flex-wrap, but I'd want to do something better.</li>
+                <li>Write a different paragraph for the city page. I could only eke out one on the clock.</li>
+                <li>Add slideshow elements to the banner, advertisements, etc.</li>
+                <li>Assuming I could get the resources down, add more images.</li>
+                <li>Check for redundant CSS.</li>
+            </ul>
+            <h4>Thanks for everything this semester. Your grading recordings helped a lot.</h4>
         </main>
         <footer>
             <section class="map">
