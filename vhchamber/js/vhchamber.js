@@ -2,29 +2,7 @@ const apiKey = 'f062c5ac3e102c4047925dcbb3d80bdc';
 const date = new Date();
 const day = [" Sunday", " Monday", "Tuesday", " Wednesday", " Thursday", "Friday", " Saturday", " Sunday"];
 const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-/* document.getElementById("date").innerHTML = day[date.getDay()] +
-", " + date.getDate() + " " + month[date.getMonth()] + " " +
-date.getFullYear(); */
-
-function imageLoad() {
-    if('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((items, observer) => {
-        items.forEach((item) => {
-            if(item.isIntersecting) {
-            loadImages(item.target);
-            observer.unobserve(item.target);
-            }
-        });
-        });
-        imagesToLoad.forEach((img) => {
-        observer.observe(img);
-        });
-    } else {
-        imagesToLoad.forEach((img) => {
-        loadImages(img);
-        });
-    }
-}
+/* const phImage = "https://saraytin.github.io/vhchamber/images/placeholder.jpg" */
 
 function lastModified() {
     var lastModified = document.lastModified;
@@ -41,13 +19,6 @@ function toggleMenu() {
     }
 }
 
-let imagesToLoad = document.querySelectorAll('[data-src]');
-const loadImages = (image) => {
-  image.setAttribute('src', image.getAttribute('data-src'));
-  image.onload = () => {
-    image.removeAttribute('data-src');
-  };
-};
 
 function weatherUpdate() {
     const weatherURL = 'https://api.openweathermap.org/data/2.5/onecall?lat=33.4487&lon=-86.7878&exclude=minutely,hourly&units=imperial&appid=';
@@ -67,10 +38,10 @@ function weatherUpdate() {
           let img = document.createElement('img');
           let temp = document.createElement('p');
           let dayName = day[date.getDay()+i];
-          let imgsrc = 'https://openweathermap.org/img/wn/' + jsonObject.daily[i].weather[0].icon + '@2x.png';
+          let imageURL = 'https://openweathermap.org/img/wn/' + jsonObject.daily[i].weather[0].icon + '@2x.png';
           let imgalt = jsonObject.daily[i].weather[0].description;
           label.textContent = dayName;
-          img.setAttribute('src', imgsrc);
+          img.setAttribute('src', imageURL);
           img.setAttribute('alt', imgalt);
           temp.textContent = Math.round(jsonObject.daily[i].temp.day) + '℉';
           card.appendChild(label);
@@ -154,6 +125,8 @@ function displayBusiness(jsonObject, i) {
     let siteURL = jsonObject.business[i].site;
     site.setAttribute('href', siteURL);
     let imageURL = jsonObject.business[i].logo;
+/*     img.setAttribute('src', phImage);
+    img.setAttribute('data-src', imageURL); */
     img.setAttribute('src', imageURL);
     img.setAttribute('alt', "Logo for " + name);
     card.appendChild(label);
@@ -180,6 +153,8 @@ function eventUpdate() {
             label.textContent = name;
             desc.textContent = jsonObject.event[i].description;
             let imageURL = jsonObject.event[i].image;
+/*             img.setAttribute('src', phImage);
+            img.setAttribute('data-src', imageURL); */
             img.setAttribute('src', imageURL);
             img.setAttribute('alt', "Image of " + name);
             card.appendChild(label);
@@ -279,4 +254,34 @@ function boardUpdate() {
             document.querySelector('div.members').appendChild(card);
         }
       });  
+}
+
+
+
+function loadStuff() {
+    let imagesToLoad = document.querySelectorAll('[data-src]');
+    const loadImages = (image) => {
+        image.setAttribute('src', image.getAttribute('data-src'));
+        image.onload = () => {
+            image.removeAttribute('data-src');
+        };
+    };
+
+    if('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((items, observer) => {
+        items.forEach((item) => {
+            if(item.isIntersecting) {
+            loadImages(item.target);
+            observer.unobserve(item.target);
+            }
+        });
+        });
+        imagesToLoad.forEach((img) => {
+        observer.observe(img);
+        });
+    } else {
+        imagesToLoad.forEach((img) => {
+        loadImages(img);
+        });
+    }
 }
