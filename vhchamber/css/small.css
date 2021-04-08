@@ -8,7 +8,7 @@
     --background-color: #F1FAEE;
     --primary-text: #070A0E;
     --secondary-text: #A8DADC;
-    --link-text: #E63946;
+    --link-text: #b6111e;
     --primary-accent: #1D3557;
     --secondary-accent: #457B9D;
 }
@@ -293,6 +293,7 @@ div.forecast section {
 div.advertisements {
     clear: both;
     display: flex;
+    flex-direction: column;
 }
 
 div.advertisements section {
