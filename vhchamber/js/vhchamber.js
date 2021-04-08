@@ -96,7 +96,6 @@ function getRandomInt(min, max) {
 }
 
 function advertisementUpdate() {
-    console.log('here');
     const requestURL = "https://saraytin.github.io/vhchamber/json/businesses.json";
     fetch(requestURL)
       .then(function (response) {
@@ -104,11 +103,9 @@ function advertisementUpdate() {
       })
       .then(function (jsonObject) {
           // Picking three random businesses to advertise from my list of affiliated businesses
-        console.log('here');
         let pick1 = 0;
         let pick2 = 0;
         let pick3 = 0;
-        console.log(pick1, pick2, pick3);
         const len = jsonObject.business.length;
         pick1 = getRandomInt(0, len);
         do {
@@ -119,21 +116,17 @@ function advertisementUpdate() {
             pick3 = getRandomInt(0, len);
         }
         while (pick3 == pick1 || pick3 == pick2);
-        console.log(pick1, pick2, pick3);
         // Run a for/if loop combo that picks up each of the businesses
         for (i = 0; i < len; i++) {
             if (i == pick1 || i == pick2 || i == pick3){
-                console.log(i);
+                // I'll be doing the same thing again on the business page so I split it into a separate function
                 displayBusiness(jsonObject, i);
-                console.log('here');
             }
-            // I'll be doing the same thing again on the business page so I split it into a separate function
         }
       });  
 }
 
 function displayBusiness(jsonObject, i) {
-    console.log('henext func');
     let card = document.createElement('section');
     let label = document.createElement('h4');
     let img = document.createElement('img');
@@ -149,11 +142,70 @@ function displayBusiness(jsonObject, i) {
     site.setAttribute('href', siteURL);
     let imageURL = jsonObject.business[i].logo;
     img.setAttribute('src', imageURL);
-    img.setAttribute('alt', name);
+    img.setAttribute('alt', "Logo for " + name);
     card.appendChild(label);
     card.appendChild(address);
     card.appendChild(phone);
     card.appendChild(site);
     card.appendChild(img);
     document.querySelector('div.advertisements').appendChild(card);
+}
+
+function eventUpdate() {
+    const requestURL = "https://saraytin.github.io/vhchamber/json/events.json";
+    fetch(requestURL)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (jsonObject) {
+          for (i = 0; i < jsonObject.event.length; i++) {
+            let card = document.createElement('section');
+            let label = document.createElement('h4');
+            let img = document.createElement('img');
+            let desc = document.createElement('p');
+            let name = jsonObject.event[i].name;
+            label.textContent = name;
+            desc.textContent = jsonObject.event[i].description;
+            let imageURL = jsonObject.event[i].image;
+            img.setAttribute('src', imageURL);
+            img.setAttribute('alt', "Image of " + name);
+            card.appendChild(label);
+            card.appendChild(desc);
+            card.appendChild(img);
+            // This is a bad solution but it's what I'm going with for now
+            if (typeof jsonObject.event[i].vendors != "undefined") {
+                let header = document.createElement('p');
+                header.textContent = "Vendors:";
+                let vendors = document.createElement('ul');
+                for (v = 0; v < jsonObject.event[i].vendors; v++) {
+                    let vendor = document.createElement('li');
+                    vendor.textContent = jsonObject.event[i].vendors[v].name;
+                    vendors.appendChild(vendor);
+                }
+                card.appendChild(header);
+                card.appendChild(vendors);
+            }
+            else if (typeof jsonObject.event[i].speakers != "undefined") {
+                let speakers = document.createElement('ul');
+                for (s = 0; s < jsonObject.event[i].speakers; s++) {
+                    let speaker = document.createElement('li');
+                    let name = document.createElement('p');
+                    let title = document.createElement('p');
+                    let sDate = document.createElement('p');
+                    let food = document.createElement('p');
+                    name.textContent = "Speaker: " + jsonObject.event[i].speakers[s].name;
+                    title.textContent = jsonObject.event[i].speakers[s].title;
+                    sDate.textContent = jsonObject.event[i].speakers[s].date;
+                    food.textContent = jsonObject.event[i].speakers[s].food;
+                    speaker.appendChild(name);
+                    speaker.appendChild(title);
+                    speaker.appendChild(sDate);
+                    speaker.appendChild(food);
+                    speakers.appendChild(speaker);
+                }
+                card.appendChild(speakers);
+            }
+            document.querySelector('div.events').appendChild(card);
+          }
+      });  
 }
